@@ -1,0 +1,23 @@
+{
+  "name": "serverless-components-aws-spa",
+  "description": "Deploy your SPA using the serverless framework.",
+  "version": "0.0.1",
+  "scripts": {
+    "setup": "yarn install --ignore-optional"
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "engines": {
+    "node": ">= 12"
+  },
+  "homepage": "https://github.com/riotz-works/serverless-components-aws-spa#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/riotz-works/serverless-components-aws-spa.git"
+  },
+  "bugs": {
+    "url": "https://github.com/riotz-works/serverless-components-aws-spa/issues"
+  },
+  "author": "Riotz.works (https://riotz.works)",
+  "license": "MIT"
+}
