@@ -3,11 +3,16 @@
   "description": "Deploy your SPA using the serverless framework.",
   "version": "0.0.1",
   "scripts": {
-    "setup": "yarn install --ignore-optional"
+    "setup": "yarn install --ignore-optional",
+    "lint": "eslint . --ext .js,.ts",
+    "lint:fix": "eslint . --fix --ext .js,.ts"
   },
   "dependencies": {},
   "devDependencies": {
     "@types/node": "^13.1.8",
+    "@typescript-eslint/eslint-plugin": "^2.17.0",
+    "@typescript-eslint/parser": "^2.17.0",
+    "eslint": "^6.8.0",
     "typescript": "^3.7.5"
   },
   "engines": {
