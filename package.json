@@ -6,7 +6,10 @@
     "setup": "yarn install --ignore-optional"
   },
   "dependencies": {},
-  "devDependencies": {},
+  "devDependencies": {
+    "@types/node": "^13.1.8",
+    "typescript": "^3.7.5"
+  },
   "engines": {
     "node": ">= 12"
   },
