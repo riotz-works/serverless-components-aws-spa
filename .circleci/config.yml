@@ -1,0 +1,43 @@
+version: 2.1
+
+executors:
+  default:
+    working_directory: ~/workspace
+    docker:
+      - image: circleci/node:12
+    environment:
+      TZ: /usr/share/zoneinfo/Asia/Tokyo
+
+
+jobs:
+  build-prj:
+    executor:
+      name: default
+    steps:
+      - run:
+          command: |
+            echo $RAP_TAP_APP_CORE_API
+  build-mix:
+    executor:
+      name: default
+    steps:
+      - run:
+          command: |
+            echo $RAP_TAP_APP_CORE_API
+
+
+workflows:
+  version: 2
+  build-deploy-flow:
+    jobs:
+      - build-prj:
+          filters:
+            tags:
+              ignore: /^cxt-.*|^mix-.*/
+      - build-mix:
+          context: rap-tap-app
+          filters:
+            tags:
+              only: /^mix-.*/
+            branches:
+              ignore: /.*/
